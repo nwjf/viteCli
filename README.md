@@ -1,3 +1,17 @@
+## package manager `pnpm`
+[为什么使用pnpm](https://www.kochan.io/nodejs/why-should-we-use-pnpm.html)
+
+如果没有安装pnpm的同学可以这样安装下
+
+```bash
+npm install -g pnpm
+```
+
+初始化工程
+
+```bash
+pnpm install
+```
 ## Git 贡献提交规范
 
 -   参考
