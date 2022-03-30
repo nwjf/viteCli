@@ -11,6 +11,7 @@ npm install -g pnpm
 
 ```bash
 pnpm install
+npm run dev
 ```
 ## Git 贡献提交规范
 

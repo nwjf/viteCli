@@ -47,6 +47,8 @@ module.exports = {
     'no-spaced-func': 2, // 函数调用时 函数名与()之间不能有空格
     'no-sparse-arrays': 2, // 禁止稀疏数组， [1,,2]
     'no-trailing-spaces': 1, // 一行结束后面不要有空格
+    'no-unused-vars': 0, // 定义但未使用
+    'no-undef': 0, // 未定义
     // 'no-empty': 2, // 块语句中的内容不能为空
     // 'no-inline-comments': 0, // 禁止行内备注
     // 'eol-last': ['error', 'never'],
@@ -107,6 +109,7 @@ module.exports = {
     ], // template,script,style标签的结束标签强制换行，允许在一行
 
     'vue/multi-word-component-names': 0,
+    'vue/require-default-prop': 0, // props 设置默认值
 
     /**
      * template
