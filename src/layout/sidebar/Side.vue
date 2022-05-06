@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// import path from 'path';
 import { computed } from 'vue';
 
 const props = defineProps({
@@ -8,7 +7,11 @@ const props = defineProps({
 });
 
 const parentPath = computed(() => {
-  return ((props.parent || '/') + '/' + props.menu.path).replace(/(\/\/\/)|(\/\/)/gi, '/');
+  const reg = /^\/.*/g;
+  reg.lastIndex = 0;
+  if (reg.test(props.menu.path))
+    return props.menu.path;
+  return ((props.parent || '/') + '/' + props.menu.path).replace(/\/{1,}/gi, '/');
 });
 
 // 获取子路由列表
@@ -36,11 +39,13 @@ const getMenuName = (router) => {
         v-for="(item, index) in getChildrens(menu)"
         :key="index"
         :menu="item"
-        :parent="parentPath" />
+        :parent="parentPath"
+      />
     </el-sub-menu>
     <el-menu-item
       v-else
-      :index="parentPath">
+      :index="parentPath"
+    >
       {{ getMenuName(menu) }} - {{ parentPath }}
     </el-menu-item>
   </div>

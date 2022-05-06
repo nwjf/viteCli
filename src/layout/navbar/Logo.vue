@@ -1,10 +1,19 @@
 <script lang="ts" setup>
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+const $store = useStore();
+const openSidebar = computed(() => $store.state.setting.openSidebar);
 </script>
 
 <template>
   <div class="logo">
     <img src="@/assets/logo.png" alt="">
-    <div class="logo-name">TME管理系统</div>
+    <div
+      v-if="openSidebar"
+      class="logo-name"
+    >
+      TME管理系统
+    </div>
   </div>
 </template>
 

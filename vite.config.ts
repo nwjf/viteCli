@@ -37,7 +37,13 @@ export default defineConfig({
   plugins: [
     vue(),
     eslintPlugin({
-      include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx', 'src/**/*.js', 'src/**/*.jsx'],
+      include: [
+        'src/**/*.vue',
+        'src/**/*.ts',
+        'src/**/*.tsx',
+        'src/**/*.js',
+        'src/**/*.jsx',
+      ],
     }),
     Components({
       resolvers: [

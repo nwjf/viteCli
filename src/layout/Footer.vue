@@ -13,7 +13,7 @@ const year = new Date().getFullYear();
 .footer {
   width: 100%;
   height: 86px;
-  background: #fff;
+  // background: #fff;
   text-align: center;
   font-size: 12px;
   color: #8A9099;

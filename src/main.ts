@@ -1,11 +1,15 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-// import ElementPlus from 'element-plus';
-// import 'element-plus/dist/index.css';
+import store from './store';
 import './styles/index';
 
-createApp(App)
-  .use(router)
-  // .use(ElementPlus, { size: 'small', zIndex: 100 })
-  .mount('#app');
+import * as ElIcon from '@element-plus/icons-vue';
+
+const app = createApp(App);
+app.use(router);
+app.use(store);
+app.mount('#app');
+for (let key in ElIcon) {
+  app.component(key, ElIcon[key]);
+}

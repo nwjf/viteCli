@@ -1,0 +1,67 @@
+/***
+  * vue 动画
+  */
+
+// width 动画
+.width-enter-active {
+  transition: all .2s ease;
+  overflow: hidden;
+}
+
+.width-leave-active {
+  transition: all .2s ease;
+  overflow: hidden;
+  border-color: transparent !important;
+}
+
+.width-enter,
+.width-leave-to {
+  width: 0 !important;
+  overflow: hidden !important;
+  border-color: transparent !important;
+}
+
+// height 动画
+.height-enter-active {
+  transition: all .2s ease;
+  overflow: hidden;
+}
+.height-leave-active {
+  transition: all .2s ease;
+  overflow: hidden;
+  border-color: transparent!important;
+}
+.height-enter, .height-leave-to {
+  height: 0!important;
+  overflow: hidden!important;
+  border-color: transparent!important;
+}
+
+// opacity 动画
+.opacity-enter-active {
+  transition: all .2s ease;
+  overflow: hidden;
+}
+.opacity-leave-active {
+  transition: all .2s ease;
+  overflow: hidden;
+}
+.opacity-enter, .opacity-leave-to {
+  opacity: 0!important;
+}
+
+// max height 动画
+.maxHeight-enter-active {
+  transition: all .4s ease;
+  overflow: hidden;
+}
+.maxHeight-leave-active {
+  transition: all .4s linear;
+  overflow: hidden;
+  border-color: transparent!important;
+}
+.maxHeight-enter, .maxHeight-leave-to {
+  max-height: 0!important;
+  overflow: hidden!important;
+  border-color: transparent!important;
+}
